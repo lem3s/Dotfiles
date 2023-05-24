@@ -14,5 +14,9 @@ ZSH_THEME="norm"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
 alias ip="cd Faculdade/PrimeiroPeriodo/IntroProg/"
+alias ls="exa --icons"
+alias cat="bat "
+
 export PATH="home/lemes/.local/bin:$PATH"
