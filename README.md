@@ -1,0 +1,1 @@
+Pacotes Necessários: npm, ohmyzsh
