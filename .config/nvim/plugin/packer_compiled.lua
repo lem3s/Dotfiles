@@ -165,6 +165,11 @@ _G.packer_plugins = {
     path = "/home/lemes/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/lemes/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["vim-be-good"] = {
     loaded = true,
     path = "/home/lemes/.local/share/nvim/site/pack/packer/start/vim-be-good",

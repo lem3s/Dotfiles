@@ -11,4 +11,4 @@ require('lualine').setup{
     theme = 'gruvbox-material'
   }
 }
-
+require "user.toggleterm"

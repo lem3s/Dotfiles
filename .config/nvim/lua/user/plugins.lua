@@ -51,9 +51,6 @@ return packer.startup(function(use)
 
   -- Colorscheme
   use "sainnhe/gruvbox-material"
-  --use "ellisonleao/gruvbox.nvim" -- Gruvbox Colorscheme
-  --use "morhetz/gruvbox"
-  --use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
 
   use "norcalli/nvim-colorizer.lua"
 
@@ -73,14 +70,14 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
-
+  
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
-  --use "vim-airline/vim-airline"
-  --use "vim-airline/vim-airline-themes"
+  use "akinsho/toggleterm.nvim"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
