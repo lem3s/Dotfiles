@@ -70,9 +70,6 @@ return packer.startup(function(use)
   -- Status Line
   use "nvim-lualine/lualine.nvim"
 
-  -- Buffer line
-  use "akinsho/bufferline.nvim"
-
   -- Togglable terminal
   use "akinsho/toggleterm.nvim"
 
