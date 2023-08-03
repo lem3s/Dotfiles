@@ -18,6 +18,10 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+
+-- X not copy
+keymap("n", "x", "_x", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
