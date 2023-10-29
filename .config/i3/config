@@ -238,3 +238,8 @@ default_border pixel 2
 default_floating_border pixel 2
 
 gaps inner 5
+
+########
+# MONITOR CONFIG
+bindsym $mod+m move workspace to output left
+########
