@@ -20,7 +20,7 @@ vim.g.maplocalleader = " "
 -- Normal --
 
 -- X not copy
-keymap("n", "x", "_x", opts)
+--keymap("n", "x", "_x", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
