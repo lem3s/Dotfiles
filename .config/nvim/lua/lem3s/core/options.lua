@@ -35,3 +35,6 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+-- max number of cmp suggestions
+opt.pumheight = 7

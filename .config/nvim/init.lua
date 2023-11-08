@@ -3,6 +3,7 @@ require("lem3s.plugins-setup")
 require("lem3s.core.options")
 require("lem3s.core.keymaps")
 require("lem3s.core.colorscheme")
+vim.g.gruvbox_material_transparent_background = '1'
 
 require("lem3s.plugins.comment")
 require("lem3s.plugins.nvim-tree")

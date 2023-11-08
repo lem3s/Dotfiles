@@ -8,7 +8,7 @@ local keymap = vim.keymap --for conciseness
 
 keymap.set("i", "jk", "<ESC>")
 
-keymap.set("i", "<leader>nh", ":nohl<CR>") -- clear search higlighting
+keymap.set("n", "<leader>cl", ":noh<CR>") -- clear search higlighting
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
