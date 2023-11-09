@@ -49,7 +49,7 @@ Normal Mode
 
 Visual Mode
 
-* `>` Indent text block to left
+* `<` Indent text block to left
 * `>` Indent text block to right
 * `J` Move text block down
 * `K` Move text block up
