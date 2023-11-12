@@ -3,8 +3,7 @@ if not setup then
   return
 end
 
--- recommended settings from documentation
-vim.loadaed = 1
+vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
@@ -12,8 +11,8 @@ nvimtree.setup({
     icons = {
       glyphs = {
         folder = {
-          arrow_closed = "",
-          arrow_open = "",
+          arrow_closed = "", -- arrow when folder is closed
+          arrow_open = "", -- arrow when folder is open
         },
       },
     },
