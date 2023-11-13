@@ -37,15 +37,14 @@ Insert Mode
 
 Normal Mode
 
-* `<leader>cl` clear search highlight
+* `<leader>nh` clear search highlight
 * `<leader>sv` split window verticaly
 * `<leader>sh` split window horizontaly
 * `<leader>se` make split windows the same size
 * `<leader>sx` close current window
-* `<leader>to` open new tab
-* `<leader>tx` close current tab
-* `<leader>tn` go to next tab
-* `<leader>tp` go to previous tab
+* `<leader>bx` close current buffer
+* `<leader>bn` go to next buffer
+* `<leader>bp` go to previous buffer
 
 Visual Mode
 
@@ -53,3 +52,10 @@ Visual Mode
 * `>` Indent text block to right
 * `J` Move text block down
 * `K` Move text block up
+
+>Plugins
+
+Telescope
+
+* `<leader>ff` Telescope find files
+* `<leader>fs` Telescope find text(string)

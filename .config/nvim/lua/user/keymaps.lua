@@ -41,10 +41,10 @@ keymap("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
 keymap("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width & height
 keymap("n", "<leader>sx", ":close<CR>", opts) -- close current split window
 
-keymap("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
-keymap("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
-keymap("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
-keymap("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
+-- keymap("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
+-- keymap("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
+-- keymap("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
+-- keymap("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 
 -- Insert --
 -- Press jk fast to enter
@@ -62,10 +62,10 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
