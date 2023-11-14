@@ -2,60 +2,65 @@
 
 I use btw:
 
-* Nvim
-* Zsh
-* i3wm
-
+- Nvim
+- Zsh
+- i3wm
 
 ### Configuring environment
 
 Installing packages:
+
 ```
 sudo pacman -S alacritty neovim cargo npm neofetch unzip rofi i3-wm i3status ttf-liberation steam arandr make yarn
 ```
+
 Download nerd-font:
+
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 ```
+
 Then, move and extract the fonts to `~/.local/share/fonts/jetbrainsmonoNF`
+
+> Obs: on Mason install prettier and stylua
 
 ---
 
 ### Using nvim
 
->Cheatsheet
+> Cheatsheet
 
 ![vim cheatcheet](vimCheatsheet.png)
 
->My personal keymaps
+> My personal keymaps
 
 `<leader>` = **space** key
 
 Insert Mode
 
-* `jk` exit insert mode
+- `jk` exit insert mode
 
 Normal Mode
 
-* `<leader>nh` clear search highlight
-* `<leader>sv` split window verticaly
-* `<leader>sh` split window horizontaly
-* `<leader>se` make split windows the same size
-* `<leader>sx` close current window
-* `<leader>bx` close current buffer
-* `<leader>bn` go to next buffer
-* `<leader>bp` go to previous buffer
+- `<leader>nh` clear search highlight
+- `<leader>sv` split window verticaly
+- `<leader>sh` split window horizontaly
+- `<leader>se` make split windows the same size
+- `<leader>sx` close current window
+- `<leader>bx` close current buffer
+- `<leader>bn` go to next buffer
+- `<leader>bp` go to previous buffer
 
 Visual Mode
 
-* `<` Indent text block to left
-* `>` Indent text block to right
-* `J` Move text block down
-* `K` Move text block up
+- `<` Indent text block to left
+- `>` Indent text block to right
+- `J` Move text block down
+- `K` Move text block up
 
->Plugins
+> Plugins
 
 Telescope
 
-* `<leader>ff` Telescope find files
-* `<leader>fs` Telescope find text(string)
+- `<leader>ff` Telescope find files
+- `<leader>fs` Telescope find text(string)

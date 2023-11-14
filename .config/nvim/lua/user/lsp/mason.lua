@@ -1,9 +1,15 @@
 local servers = {
-  "lua_ls",
-	"pyright",
+	"clangd",
+	"cssls",
+	"eslint",
+	"html",
 	"jsonls",
-  "clangd",
-  "html",
+	"lua_ls",
+	"pyright",
+	"tsserver",
+
+	-- "prettier",
+	-- "stylua",
 }
 
 local settings = {
