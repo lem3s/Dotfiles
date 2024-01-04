@@ -4,33 +4,27 @@ I use btw:
 
 - Nvim
 - Zsh
-- i3wm
+- yabai
 
 ### Configuring environment
 
 Installing packages:
 
 ```
-sudo pacman -S alacritty neovim cargo npm neofetch unzip rofi i3-wm i3status ttf-liberation steam arandr make yarn
+brew install bat exa fzf ranger make neovim node neofetch powerlevel10k skhd tmux unzip wget yabai ytop zsh-autosuggestions zsh-syntax-highlighting
 ```
 
 Download nerd-font:
 
 ```
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/MesloLGSNerdFontMono-Regular.ttf
 ```
-
-Then, move and extract the fonts to `~/.local/share/fonts/jetbrainsmonoNF`
 
 > Obs: on Mason install prettier and stylua
 
 ---
 
 ### Using nvim
-
-> Cheatsheet
-
-![vim cheatcheet](vimCheatsheet.png)
 
 > My personal keymaps
 
