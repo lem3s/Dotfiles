@@ -109,6 +109,7 @@ return packer.startup(function(use)
 	-- Change html tags
 	use("AndrewRadev/tagalong.vim")
 
+	-- Better navigation
 	use("christoomey/vim-tmux-navigator")
 
 	-- Automatically set up your configuration after cloning packer.nvim

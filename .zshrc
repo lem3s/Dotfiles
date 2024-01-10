@@ -28,4 +28,4 @@ alias tls="tmux ls"
 alias ta="tmux attach -t"
 alias td="tmux detach"
 
-export PATH=$PATH:/Users/lemes/.local/bin
+export PATH="$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin"
