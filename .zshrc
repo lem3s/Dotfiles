@@ -28,4 +28,6 @@ alias tls="tmux ls"
 alias ta="tmux attach -t"
 alias td="tmux detach"
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin"
+alias gs="git status"
+
+export PATH="$PATH:$HOME/.local/bin"
