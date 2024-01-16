@@ -214,6 +214,16 @@ _G.packer_plugins = {
     path = "/Users/lemes/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-carbon-now-sh"] = {
+    loaded = true,
+    path = "/Users/lemes/.local/share/nvim/site/pack/packer/start/vim-carbon-now-sh",
+    url = "https://github.com/kristijanhusak/vim-carbon-now-sh"
+  },
+  ["vim-ray-so-beautiful"] = {
+    loaded = true,
+    path = "/Users/lemes/.local/share/nvim/site/pack/packer/start/vim-ray-so-beautiful",
+    url = "https://github.com/sudoerwx/vim-ray-so-beautiful"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/lemes/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",

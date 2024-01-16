@@ -31,3 +31,5 @@ alias td="tmux detach"
 alias gs="git status"
 
 export PATH="$PATH:$HOME/.local/bin"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh

@@ -14,3 +14,6 @@ require("user.comment")
 require("user.indent-lines")
 require("user.gitsigns")
 require("user.formatter")
+require("user.rayso")
+require("user.carbon-now")
+

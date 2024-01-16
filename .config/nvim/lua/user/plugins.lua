@@ -112,6 +112,10 @@ return packer.startup(function(use)
 	-- Better navigation
 	use("christoomey/vim-tmux-navigator")
 
+	-- Code Screenshots
+	use("sudoerwx/vim-ray-so-beautiful")
+	use("kristijanhusak/vim-carbon-now-sh")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
