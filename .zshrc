@@ -29,6 +29,7 @@ alias ta="tmux attach -t"
 alias td="tmux detach"
 
 alias gs="git status"
+alias ga="git add"
 
 export PATH="$PATH:$HOME/.local/bin"
 
