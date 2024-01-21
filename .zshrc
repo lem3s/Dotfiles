@@ -31,6 +31,8 @@ alias td="tmux detach"
 alias gs="git status"
 alias ga="git add"
 
+alias autogit='git add . && git commit -m "commit automatizado" && git push origin main'
+
 export PATH="$PATH:$HOME/.local/bin"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
