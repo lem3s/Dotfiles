@@ -1,0 +1,111 @@
+{
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "gruvboxMaterial.colorfulSyntax": true,
+    "gruvboxMaterial.darkWorkbench": "high-contrast",
+
+    "symbols.hidesExplorerArrows": false,
+
+    "workbench.iconTheme": "symbols",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.6,
+    "editor.fontLigatures": false,
+    "editor.rulers": [
+        80,
+        120
+    ],
+
+    "workbench.startupEditor": "none",
+    "editor.renderLineHighlight": "gutter",
+    "workbench.editor.labelFormat": "short",
+    "editor.formatOnSave": false,
+    "update.showReleaseNotes": false,
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "relative",
+
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {"before": ["j", "k"],"after": ["<Esc>"]},
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // NAVIGATION
+        // switch b/w buffers
+        { "before": ["leader", "b", "p"], "commands": [":bprevious"] },
+        { "before": ["leader", "b", "n"], "commands": [":bnext"] },
+        { "before": ["leader", "b", "x"], "commands": [":bdelete"] },
+    
+        // splits
+        { "before": ["leader", "s", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s", "h"], "commands": [":split"] },
+
+        // panes
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["<C-j>",],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+
+        //Toggle file-tree
+        { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+
+        //File finder
+        { "before": ["leader", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+
+        //Toggle terminal and editor
+        { "before": ["leader", "t", "t"], "commands": ["workbench.action.terminal.focus"] },
+    ],    
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {"before": [">"],"commands": ["editor.action.indentLines"]},
+        {"before": ["<"],"commands": ["editor.action.outdentLines"]},
+        {"before": ["J"],"commands": ["editor.action.moveLinesDownAction"]},
+        {"before": ["K"],"commands": ["editor.action.moveLinesUpAction"]},
+    ],
+
+    "explorer.compactFolders": true,
+    "editor.semanticHighlighting.enabled": false,
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "workbench.statusBar.visible": true,
+
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+    },
+    "apc.header": {
+        "height": 30,
+    },
+    "apc.listRow": {
+        "height": 24,
+    },
+    "apc.font.family": "Inter",
+    "apc.stylesheet": {
+        ".title-label > h2": "display: none",
+        ".editor-actions": "display: none",
+        ".nosidebar .inline-tabs-placeholder": "width: 75px",
+        ".pane-header": "padding: 0 8px",
+        ".pane-body": "padding: 0px",
+        ".split-view-view:first-child .pane-header": "display: none !important;",
+        ".monaco-list-row": "border-radius: 4px;",
+        ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;",
+        ".titlebar-container": "background-color: #292828",
+        ".items-container": "background-color: #292828",
+    },
+
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "explorer.fileNesting.enabled": true,
+}
