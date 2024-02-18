@@ -34,7 +34,7 @@
         { "before": ["leader", "b", "p"], "commands": [":bprevious"] },
         { "before": ["leader", "b", "n"], "commands": [":bnext"] },
         { "before": ["leader", "b", "x"], "commands": [":bdelete"] },
-    
+
         // splits
         { "before": ["leader", "s", "v"], "commands": [":vsplit"] },
         { "before": ["leader", "s", "h"], "commands": [":split"] },
@@ -65,7 +65,7 @@
 
         //Toggle terminal and editor
         { "before": ["leader", "t", "t"], "commands": ["workbench.action.terminal.focus"] },
-    ],    
+    ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {"before": [">"],"commands": ["editor.action.indentLines"]},
         {"before": ["<"],"commands": ["editor.action.outdentLines"]},
