@@ -11,7 +11,7 @@ I use btw:
 Installing packages:
 
 ```
-brew install bat exa fzf ranger make neovim node neofetch powerlevel10k skhd tmux unzip wget yabai ytop zsh-autosuggestions zsh-syntax-highlighting
+brew install bat exa fzf ranger make neovim node neofetch powerlevel10k skhd tmux unzip wget yabai ytop zsh-autosuggestions zsh-syntax-highlighting ripgrep
 ```
 
 Download nerd-font:
