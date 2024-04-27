@@ -30,6 +30,8 @@ return {
         "html",
         "cssls",
         "clangd",
+        "gopls",
+        "jdtls",
         "lua_ls",
         "pyright",
       },
