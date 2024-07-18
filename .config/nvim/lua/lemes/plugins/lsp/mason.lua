@@ -41,6 +41,10 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
+        "prettier", -- prettier formatter
+        "stylua",   -- lua formatter
+        "goimports",
+        "golines",
       },
     })
   end,
