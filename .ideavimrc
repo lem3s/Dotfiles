@@ -1,0 +1,62 @@
+" Set options
+let opts = { 'noremap': v:true, 'silent': v:true }
+let term_opts = { 'silent': v:true }
+
+" Remap space as leader key
+nnoremap <silent> <Space> <Nop>
+let mapleader = " "
+let maplocalleader = " "
+
+" Normal Mode --
+" Better window navigation
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-j> <C-w>j
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-l> <C-w>l
+
+" Clear search highlights
+nnoremap <silent> <leader>nh :nohl<CR>
+
+" Side file explorer
+nnoremap <silent> <leader>e :NvimTreeToggle<CR>
+
+" Navigate buffers
+nnoremap <silent> <leader>bn :bnext<CR>
+nnoremap <silent> <leader>bp :bprevious<CR>
+nnoremap <silent> <leader>bx :bdelete<CR>
+
+" Window management
+nnoremap <silent> <leader>sv <C-w>v
+nnoremap <silent> <leader>sh <C-w>s
+nnoremap <silent> <leader>se <C-w>=
+nnoremap <silent> <leader>sx :close<CR>
+
+" nnoremap <silent> <leader>to :tabnew<CR>
+" nnoremap <silent> <leader>tx :tabclose<CR>
+" nnoremap <silent> <leader>tn :tabn<CR>
+" nnoremap <silent> <leader>tp :tabp<CR>
+
+" Insert Mode --
+" Press jk fast to enter normal mode
+inoremap <silent> jk <ESC>
+
+" Visual Mode --
+" Stay in indent mode
+vnoremap <silent> < <gv
+vnoremap <silent> > >gv
+
+" Visual Block Mode --
+" Move text up and down
+xnoremap <silent> J :move '>+1<CR>gv-gv
+xnoremap <silent> K :move '<-2<CR>gv-gv
+
+" Terminal Mode --
+" Better terminal navigation
+" tnoremap <silent> <C-h> <C-\><C-N><C-w>h
+" tnoremap <silent> <C-j> <C-\><C-N><C-w>j
+" tnoremap <silent> <C-k> <C-\><C-N><C-w>k
+" tnoremap <silent> <C-l> <C-\><C-N><C-w>l
+
+" Telescope
+" nnoremap <silent> <leader>ff <cmd>Telescope find_files<cr>
+" nnoremap <silent> <leader>fs <cmd>Telescope find_grep<cr>

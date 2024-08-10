@@ -24,6 +24,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Better far navigation
+keymap("n", "H", "I", opts)
+keymap("n", "J", "10j", opts)
+keymap("n", "K", "10k", opts)
+keymap("n", "L", "A", opts)
+
 -- Clear search highlights
 keymap("n", "<leader>nh", ":nohl<CR>", opts)
 
