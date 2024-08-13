@@ -7,7 +7,7 @@ export EDITOR=nvim
 export BROWSER=arc
 
 alias cat="bat"
-alias ls="exa --icons"
+alias ls="eza --icons"
 alias htop="ytop"
 
 alias tls="tmux ls"
