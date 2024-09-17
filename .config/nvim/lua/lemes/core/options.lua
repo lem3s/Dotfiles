@@ -36,6 +36,10 @@ vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 
+vim.opt.inccommand = "split"
+vim.opt.shada = { "'10", "<0", "s10", "h" }
+vim.opt.formatoptions:remove("o")
+
 vim.opt.shortmess:append("c")
 vim.opt.backspace = "indent,eol,start"
 
