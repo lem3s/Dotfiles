@@ -38,3 +38,15 @@ eval "$(starship init zsh)"
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux new-session -A -s terminal
 fi
+
+function print_numbers {
+  current_num=$1
+  target_num=$2
+  target_num_length=${#target_num}
+
+  while [ $current_num -le $target_num ]; do
+    printf "%0${target_num_length}d\n" $current_num
+    # or just "echo $current_num" if padding is not required
+    current_num=$((current_num + 1))
+  done
+}

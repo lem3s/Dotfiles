@@ -33,9 +33,6 @@ keymap("n", "L", "A", opts)
 -- Clear search highlights
 keymap("n", "<leader>nh", ":nohl<CR>", opts)
 
--- Side file explorer
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
 -- Navigate buffers
 keymap("n", "<leader>bn", ":bnext<CR>", opts)
 keymap("n", "<leader>bp", ":bprevious<CR>", opts)
