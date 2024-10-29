@@ -34,6 +34,7 @@ return {
 				"jdtls",
 				"lua_ls",
 				"pyright",
+				"tailwindcss",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
@@ -45,7 +46,7 @@ return {
 				"stylua", -- lua formatter
 				"goimports",
 				"golines",
-				"tailwindcss-language-server",
+				"typescript-language-server",
 			},
 		})
 	end,

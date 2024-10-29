@@ -3,9 +3,6 @@ autoload -U compinit;
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-export EDITOR=nvim
-export BROWSER=arc
-
 alias cat="bat"
 alias ls="eza --icons"
 alias htop="ytop"
@@ -28,25 +25,15 @@ alias ystop='yabai --stop-service'
 # Exercism aliases
 alias exerpytest='python3 -m pytest -o markers=task'
 
-export PATH="$PATH:$HOME/.local/bin"
+alias nix-darwin-rebuild='darwin-rebuild switch --flake ~/.config/nix#air'
+
+export PATH="$PATH:$HOME/.local/bin:$HOME/.asdf/shims/"
 export TESSDATA_PREFIX="/opt/homebrew/share/tessdata"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+#. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 eval "$(starship init zsh)"
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s terminal
-fi
-
-function print_numbers {
-  current_num=$1
-  target_num=$2
-  target_num_length=${#target_num}
-
-  while [ $current_num -le $target_num ]; do
-    printf "%0${target_num_length}d\n" $current_num
-    # or just "echo $current_num" if padding is not required
-    current_num=$((current_num + 1))
-  done
-}
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux new-session -A -s terminal
+# fi
