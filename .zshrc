@@ -4,7 +4,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 alias cat="bat"
-alias ls="eza --icons"
+alias ls="eza --icons -l"
 alias htop="ytop"
 
 alias tls="tmux ls"
@@ -27,7 +27,7 @@ alias exerpytest='python3 -m pytest -o markers=task'
 
 alias nix-darwin-rebuild='darwin-rebuild switch --flake ~/.config/nix#air'
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/.asdf/shims/"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.asdf/shims/:$HOME/.asdf/installs/golang/1.23.0/packages/bin/"
 export TESSDATA_PREFIX="/opt/homebrew/share/tessdata"
 
 #. /opt/homebrew/opt/asdf/libexec/asdf.sh
