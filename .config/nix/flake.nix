@@ -90,15 +90,17 @@
       system.activationScripts.userScript.text = ''
         wget https://github.com/sbmpost/AutoRaise/archive/refs/heads/master.zip -P ~/Downloads
         unzip -d ~ ~/Downloads/master.zip
+        rm ~/Downloads/master.zip
         cd ~/AutoRaise-master && make CXXFLAGS="-DOLD_ACTIVATION_METHOD -DEXPERIMENTAL_FOCUS_FIRST" && make install
         /Applications/AutoRaise.app/Contents/MacOS/AutoRaise delay=0 focusDelay=1 &
+
         '';
 
       system.defaults = {
         dock.autohide = true;
         dock.persistent-apps = [
-          "/Applications/Zen Browser.app/"
-          "${pkgs.warp-terminal}/Applications/Warp.app/"
+          "/Applications/Arc.app/.app/"
+          "${pkgs.warp-terminal}/Applications/Ghostty.app/.app/"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
