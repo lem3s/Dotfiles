@@ -27,6 +27,7 @@
           pkgs.vscode
           pkgs.tree
 
+          pkgs.ranger
           pkgs.asdf-vm
           pkgs.wget
           pkgs.neovim
