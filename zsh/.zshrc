@@ -7,12 +7,12 @@ alias cat="bat"
 alias ls="eza --icons -l"
 alias htop="ytop"
 
-alias tls="tmux ls"
-alias ta="tmux attach -t"
-alias tk="tmux kill-session -t"
-alias tnew="tmux new -s"
+# alias tls="tmux ls"
+# alias ta="tmux attach -t"
+# alias tk="tmux kill-session -t"
+# alias tnew="tmux new -s"
 
-alias td="tmux detach"
+# alias td="tmux detach"
 
 alias gs="git status"
 alias ga="git add"
@@ -28,9 +28,9 @@ alias exerpytest='python3 -m pytest -o markers=task'
 alias nix-darwin-rebuild='darwin-rebuild switch --flake ~/.config/nix#air'
 
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.asdf/shims/"
-export PATH="$PATH:$HOME/.asdf/installs/golang/1.23.0/packages/bin/"
-export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
+# export PATH="$PATH:$HOME/.asdf/shims/"
+export PATH="$PATH:${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
+# export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 
 export EDITOR="nvim"
 
@@ -39,7 +39,7 @@ export TESSDATA_PREFIX="/opt/homebrew/share/tessdata"
 #. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 eval "$(starship init zsh)"
-eval "$(tmuxifier init -)"
+# eval "$(tmuxifier init -)"
 
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #   exec tmux new-session -A -s terminal

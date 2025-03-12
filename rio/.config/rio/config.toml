@@ -1,0 +1,36 @@
+theme = "GruvboxDark"
+
+[window]
+opacity = 0.5
+decorations = "enabled"
+blur = true
+
+[fonts]
+family = "MesloLGS Nerd Font"
+size = 14
+features = []
+symbol-map = []
+
+[fonts.regular]
+style = "Normal"
+width = "Normal"
+weight = 400
+
+[fonts.bold]
+style = "Normal"
+width = "Normal"
+weight = 800
+
+[fonts.italic]
+style = "Italic"
+width = "Normal"
+weight = 400
+
+[fonts.bold-italic]
+style = "Italic"
+width = "Normal"
+weight = 800
+
+[editor]
+program = "nvim"
+args = []
