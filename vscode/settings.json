@@ -1,0 +1,150 @@
+{
+  // Installed extensions: Apc Customize UI++, Vim, Gruvbox Material, Symbols
+  // Installed font: Meslo LGS Nerd Font Mono
+
+  // Appearance
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.iconTheme": "symbols",
+  "editor.fontFamily": "MesloLGS Nerd Font Mono",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.6,
+  "editor.fontLigatures": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.renderLineHighlight": "gutter",
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80, 120],
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.tree.indent": 12,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.enablePreview": false,
+  "window.commandCenter": false,
+  "window.nativeTabs": true,
+  "window.newWindowDimensions": "inherit",
+  "window.openFoldersInNewWindow": "off",
+  "window.restoreWindows": "one",
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "terminal.external.osxExec": "Rio.app",
+
+  // Editor Behavior
+  "editor.suggest.insertMode": "replace",
+  "editor.language.colorizedBracketPairs": [],
+  "editor.links": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.smoothScrolling": true,
+  "editor.accessibilitySupport": "off",
+  "debug.console.fontSize": 12,
+  "files.autoSave": "afterDelay",
+
+  // Git & Extensions
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+  "extensions.autoUpdate": false,
+  "redhat.telemetry.enabled": true,
+
+  // GitHub Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "todo": false
+  },
+
+  // Go Language Support
+  "go.testTimeout": "300s",
+  "go.toolsManagement.autoUpdate": true,
+  "go.buildTags": "envtest",
+
+  // Vim Configuration
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.enableNeovim": false,
+  "vim.neovimConfigPath": "/opt/homebrew/bin/nvim",
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.duration": 110,
+  "vim.statusBarColorControl": true,
+
+  // Vim Keybindings
+  "vim.visualModeKeyBindings": [
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+  ],
+  "vim.normalModeKeyBindings": [
+    { "before": ["leader", "b", "p"], "commands": [":bprevious"] },
+    { "before": ["leader", "b", "n"], "commands": [":bnext"] },
+    { "before": ["leader", "b", "x"], "commands": [":bdelete"] },
+    { "before": ["leader", "s", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s", "h"], "commands": [":split"] },
+    { "before": ["<C-h>"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["<C-j>"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["<C-k>"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["<C-l>"], "commands": ["workbench.action.focusRightGroup"] },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "t", "t"],
+      "commands": ["workbench.action.terminal.focus"]
+    },
+    { "before": ["H"], "after": ["^"] },
+    { "before": ["L"], "after": ["$"] },
+    { "before": ["/"], "commands": ["actions.find"] },
+    { "before": ["ctrl+o"], "commands": ["workbench.action.navigateBack"] },
+    { "before": ["ctrl+i"], "commands": ["workbench.action.navigateForward"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "D"], "commands": ["editor.action.goToTypeDefinition"] },
+    { "before": ["leader", "l", "r"], "commands": ["editor.action.rename"] },
+    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["K"], "commands": ["editor.action.showHover"] },
+    {
+      "before": ["leader", "f", "d"],
+      "commands": ["yr.action.formatDocument"]
+    },
+    {
+      "before": ["leader", "l", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
+
+  // Miscellaneous
+  "diffEditor.ignoreTrimWhitespace": false,
+  "makefile.configureOnOpen": false,
+  "inlineChat.lineNaturalLanguageHint": false,
+  "todo.symbols.box": "□",
+  "todo.colors.dark": {},
+
+  // Workbench Customizations
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f87",
+    "statusBar.noFolderBackground": "#005f87",
+    "statusBar.debuggingBackground": "#005f87",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+
+  // Kubernetes Support
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.mac": "/Users/inelpandzic/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+  }
+}
