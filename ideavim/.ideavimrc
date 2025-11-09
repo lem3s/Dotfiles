@@ -1,62 +1,152 @@
-" Set options
-let opts = { 'noremap': v:true, 'silent': v:true }
-let term_opts = { 'silent': v:true }
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
 
-" Remap space as leader key
-nnoremap <silent> <Space> <Nop>
+" ============================================================================
+" Options
+" ============================================================================
+
+set clipboard+=unnamed,unnamedplus
+
+" Search
+set hlsearch                    " Highlight all matches on previous search pattern
+set ignorecase                  " Ignore case in search patterns
+set smartcase                   " Smart case (override ignorecase if search contains uppercase)
+set incsearch                   " Show search matches as you type
+
+" Indentation
+set smartindent                 " Make indenting smarter
+set autoindent                  " Auto indent new lines
+set expandtab                   " Convert tabs to spaces
+set shiftwidth=2                " Number of spaces for each indentation
+set tabstop=2                   " Insert 2 spaces for a tab
+
+" Scrolling
+set scrolloff=8                 " Keep 8 lines visible above/below cursor
+set sidescrolloff=8             " Keep 8 columns visible to the left/right of cursor
+
+" Editor Behavior
+set showmode                    " Show current mode (INSERT, VISUAL, etc.)
+set wrap                        " Don't wrap lines (IdeaVim default is nowrap, but being explicit)
+set timeoutlen=1000             " Time to wait for mapped sequence (in ms)
+set visualbell                  " Use visual bell instead of beeping
+set noerrorbells                " No error bells
+
+" Backspace behavior
+set backspace=indent,eol,start  " Make backspace work as expected
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" Set leader key to space
 let mapleader = " "
 let maplocalleader = " "
 
-" Normal Mode --
+" ============================================================================
+" Normal Mode
+" ============================================================================
+
 " Better window navigation
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-j> <C-w>j
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Better far navigation
+nnoremap H I
+nnoremap J 10j
+nnoremap K 10k
+nnoremap L A
 
 " Clear search highlights
-nnoremap <silent> <leader>nh :nohl<CR>
+nnoremap <leader>nh :nohlsearch<CR>
 
-" Side file explorer
-nnoremap <silent> <leader>e :NvimTreeToggle<CR>
-
-" Navigate buffers
-nnoremap <silent> <leader>bn :bnext<CR>
-nnoremap <silent> <leader>bp :bprevious<CR>
-nnoremap <silent> <leader>bx :bdelete<CR>
+" Navigate buffers (tabs in IntelliJ)
+nnoremap <leader>bn :action NextTab<CR>
+nnoremap <leader>bp :action PreviousTab<CR>
+nnoremap <leader>bx :action CloseContent<CR>
 
 " Window management
-nnoremap <silent> <leader>sv <C-w>v
-nnoremap <silent> <leader>sh <C-w>s
-nnoremap <silent> <leader>se <C-w>=
-nnoremap <silent> <leader>sx :close<CR>
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+nnoremap <leader>se <C-w>=
+nnoremap <leader>sx :action Unsplit<CR>
 
-" nnoremap <silent> <leader>to :tabnew<CR>
-" nnoremap <silent> <leader>tx :tabclose<CR>
-" nnoremap <silent> <leader>tn :tabn<CR>
-" nnoremap <silent> <leader>tp :tabp<CR>
+" ============================================================================
+" Insert Mode
+" ============================================================================
 
-" Insert Mode --
 " Press jk fast to enter normal mode
-inoremap <silent> jk <ESC>
+inoremap jk <Esc>
 
-" Visual Mode --
+" ============================================================================
+" Visual Mode
+" ============================================================================
+
 " Stay in indent mode
-vnoremap <silent> < <gv
-vnoremap <silent> > >gv
+vnoremap < <gv
+vnoremap > >gv
 
-" Visual Block Mode --
+" ============================================================================
+" Visual Block Mode
+" ============================================================================
+
 " Move text up and down
-xnoremap <silent> J :move '>+1<CR>gv-gv
-xnoremap <silent> K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
+xnoremap K :move '<-2<CR>gv-gv
 
-" Terminal Mode --
-" Better terminal navigation
-" tnoremap <silent> <C-h> <C-\><C-N><C-w>h
-" tnoremap <silent> <C-j> <C-\><C-N><C-w>j
-" tnoremap <silent> <C-k> <C-\><C-N><C-w>k
-" tnoremap <silent> <C-l> <C-\><C-N><C-w>l
+" ============================================================================
+" Optional IdeaVim Extensions (uncomment to enable)
+" IdeaVim plugins https://jb.gg/ideavim-plugins
+" ============================================================================
 
-" Telescope
-" nnoremap <silent> <leader>ff <cmd>Telescope find_files<cr>
-" nnoremap <silent> <leader>fs <cmd>Telescope find_grep<cr>
+" Emulates vim-commentary
+Plug 'tpope/vim-commentary'
+
+" Enable NERDTree emulation
+Plug 'preservim/nerdtree'
+
+" Emulates vim-surround
+" set surround
+
+" Emulates argtextobj.vim
+" Plug 'vim-scripts/argtextobj.vim'
+
+" Emulates vim-exchange
+" Plug 'tommcdo/vim-exchange'
+
+" Emulates vim-highlightedyank
+Plug 'machakann/vim-highlightedyank'
+
+" ============================================================================
+" Additional useful IdeaVim mappings
+" ============================================================================
+
+" Code navigation
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gr :action FindUsages<CR>
+
+" Refactoring
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rf :action ReformatCode<CR>
+
+" File navigation (similar to Telescope)
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fs :action FindInPath<CR>
+
+" File explorer mappings
+nnoremap <leader>ee :NERDTreeToggle<CR>
+nnoremap <leader>ec :NERDTreeClose<CR>
+nnoremap <leader>ef :NERDTreeFind<CR>
