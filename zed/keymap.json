@@ -1,0 +1,149 @@
+[
+    // ============================================================================
+    // VIM MODE - NORMAL & VISUAL MODE BINDINGS
+    // ============================================================================
+    {
+      "context": "Editor",
+      "bindings": {
+        "ctrl-h": "workspace::ActivatePaneLeft",
+        "ctrl-l": "workspace::ActivatePaneRight",
+        "ctrl-k": "workspace::ActivatePaneUp",
+        "ctrl-j": "workspace::ActivatePaneDown",
+        
+        // Project panel
+        "space e": "workspace::ToggleLeftDock",
+        
+        // Terminal
+        "ctrl-/": "workspace::ToggleBottomDock",
+      }
+    },
+    
+    // ============================================================================
+    // VIM MODE - NORMAL MODE ONLY
+    // ============================================================================
+    {
+        "context": "vim_mode == normal && !menu",
+        "bindings": {
+            // Clear search highlights (Space + nh)
+            "space n h": "editor::Cancel",
+            
+            // Navigate buffers (Space + b + n/p/x)
+            "shift-l": "pane::ActivateNextItem",
+            "shift-h": "pane::ActivatePreviousItem",
+            "space b x": "pane::CloseActiveItem",
+            "space b a": "pane::CloseAllItems",
+            
+            // Window management (Space + s + v/h/e/x)
+            "space s v": "pane::SplitRight",
+            "space s h": "pane::SplitDown",
+            
+            "shift-j": ["workspace::SendKeystrokes", "7 j"],
+            "shift-k": ["workspace::SendKeystrokes", "7 k"],
+            
+            // LSP / Diagnostics
+            "g l": "editor::Hover",
+            "[ d": "editor::GoToDiagnostic",
+            "] d": "editor::GoToDiagnostic"
+        }
+    },
+    
+    // ============================================================================
+    // VIM MODE - INSERT MODE
+    // ============================================================================
+    {
+        "context": "vim_mode == insert",
+        "bindings": {
+            // Press jk fast to exit insert mode
+            "j k": "vim::NormalBefore"
+        }
+    },
+    
+    // ============================================================================
+    // VIM MODE - VISUAL MODE
+    // ============================================================================
+    {
+        "context": "vim_mode == visual",
+        "bindings": {
+            // Stay in indent mode
+            "<": "editor::Outdent",
+            ">": "editor::Indent",
+            
+            // Move lines up/down
+            "shift-j": "editor::MoveLineDown",
+            "shift-k": "editor::MoveLineUp"
+        }
+    },
+    
+    // ============================================================================
+    // WORKSPACE - GLOBAL BINDINGS
+    // ============================================================================
+    {
+        "context": "Workspace",
+        "bindings": {
+          // File finder - busca apenas nomes de arquivos (fuzzy)
+          "space f f": "file_finder::Toggle",
+          
+          // Project-wide search - busca conteúdo dentro dos arquivos
+          "space f s": "pane::DeploySearch",
+          
+          // Grep/Ripgrep search - busca de texto no projeto
+          "space f g": "search::FocusSearch",
+            
+          // Save
+          "space w": "workspace::Save"
+        }
+    },
+    
+    // ============================================================================
+    // PROJECT PANEL BINDINGS
+    // ============================================================================
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            // Vim-like navigation in project panel
+            // 
+           "space e": "workspace::ToggleLeftDock",
+            "h": "project_panel::CollapseSelectedEntry",
+            "j": "menu::SelectNext",
+            "k": "menu::SelectPrevious",
+            "l": "project_panel::ExpandSelectedEntry",
+            "o": "project_panel::Open",
+            "shift-o": "project_panel::NewDirectory",
+            "a": "project_panel::NewFile",
+            "d": "project_panel::Delete",
+            "r": "project_panel::Rename"
+        }
+    },
+    
+    // ============================================================================
+    // PROJECT PANEL BINDINGS
+    // ============================================================================
+    {
+      "context": "Terminal",
+      "bindings": {
+        "ctrl-/": "workspace::ToggleBottomDock"
+      }
+    },
+    
+    // ============================================================================
+    // ADDITIONAL VIM PLUGIN-LIKE FEATURES
+    // ============================================================================
+    {
+        "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+        "bindings": {
+            // vim-surround like functionality
+            "q": "vim::AnyQuotes",
+            "b": "vim::AnyBrackets"
+        }
+    },
+    
+    // ============================================================================
+    // EMPTY PANE BINDINGS
+    // ============================================================================
+    {
+        "context": "EmptyPane || SharedScreen",
+        "bindings": {
+            "space f f": "file_finder::Toggle"
+        }
+    }
+]
