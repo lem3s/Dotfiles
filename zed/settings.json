@@ -1,0 +1,301 @@
+{
+    // ============================================================================
+    // GENERAL EDITOR SETTINGS
+    // ============================================================================
+    "debugger": {
+        "dock": "left"
+    },
+    "preferred_line_length": 80,
+    "tab_size": 2,
+    "hard_tabs": false,
+    "show_wrap_guides": true,
+    "soft_wrap": "none",
+    "wrap_guides": [80, 120],
+
+    // ============================================================================
+    // UI CONFIGURATION
+    // ============================================================================
+    "toolbar": {
+        "agent_review": true,
+        "selections_menu": true,
+        "quick_actions": true,
+        "breadcrumbs": true,
+    },
+
+    // ============================================================================
+    // LINE NUMBERS & GUTTER
+    // ============================================================================
+    "gutter": {
+        "min_line_number_digits": 4,
+        "line_numbers": true,
+    },
+
+    // ============================================================================
+    // CURSOR & SELECTION
+    // ============================================================================
+    "cursor_blink": false,
+    "drag_and_drop_selection": {
+        "enabled": false,
+    },
+
+    // ============================================================================
+    // SCROLLING
+    // ============================================================================
+    "vertical_scroll_margin": 8,
+    "scroll_beyond_last_line": "one_page",
+    "scroll_sensitivity": 1.0,
+
+    // ============================================================================
+    // AUTO-SAVE & BACKUP
+    // ============================================================================
+    "autosave": "off",
+    "format_on_save": "off",
+    "ensure_final_newline_on_save": true,
+    "remove_trailing_whitespace_on_save": false,
+
+    // ============================================================================
+    // SEARCH & COMPLETION
+    // ============================================================================
+    "search": {
+        "case_sensitive": false,
+        "whole_word": false,
+        "regex": false,
+    },
+    "auto_signature_help": false,
+    "hover_popover_delay": 300,
+    "show_completions_on_input": true,
+    "show_completion_documentation": true,
+
+    // ============================================================================
+    // INDENTATION
+    // ============================================================================
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "fixed",
+    },
+    "auto_indent": true,
+
+    // ============================================================================
+    // PANELS & DOCKS
+    // ============================================================================
+    "git_panel": {
+        "dock": "left",
+    },
+    "project_panel": {
+        "button": true,
+        "dock": "left",
+        "git_status": true,
+    },
+    "outline_panel": {
+        "dock": "right",
+    },
+    "collaboration_panel": {
+        "dock": "right",
+    },
+    "notification_panel": {
+        "dock": "right",
+    },
+
+    // ============================================================================
+    // VIM MODE
+    // ============================================================================
+    "vim_mode": true,
+    "base_keymap": "VSCode",
+
+    // ============================================================================
+    // TABS & BUFFERS
+    // ============================================================================
+    "tab_bar": {
+        "show": true,
+    },
+    "tabs": {
+        "show_diagnostics": "errors",
+        "git_status": true,
+    },
+
+    // ============================================================================
+    // TERMINAL
+    // ============================================================================
+    "terminal": {
+        "font_family": "MesloLGS Nerd Font Mono",
+        "font_size": 12,
+        "env": {
+            "EDITOR": "zed --wait",
+        },
+        "shell": "system",
+        "dock": "bottom",
+        "working_directory": "current_project_directory",
+    },
+
+    // ============================================================================
+    // THEME & APPEARANCE
+    // ============================================================================
+    "theme": {
+        "mode": "system",
+        "light": "Gruvbox Light",
+        "dark": "Gruvbox Dark",
+    },
+    "icon_theme": "Symbols Icon Theme",
+    "ui_font_size": 16,
+    "buffer_font_size": 12,
+    "buffer_font_family": "MesloLGS Nerd Font Mono",
+
+    // ============================================================================
+    // SCROLLBAR
+    // ============================================================================
+    "scrollbar": {
+        "show": "always",
+    },
+
+    // ============================================================================
+    // CENTERED LAYOUT (ZEN MODE)
+    // ============================================================================
+    "centered_layout": {
+        "left_padding": 0.15,
+        "right_padding": 0.15,
+    },
+
+    // ============================================================================
+    // LANGUAGE MODELS
+    // ============================================================================
+    "language_models": {
+        "ollama": {
+            "api_url": "http://localhost:11434",
+        },
+    },
+
+    // ============================================================================
+    // INLAY HINTS
+    // ============================================================================
+    "inlay_hints": {
+        "enabled": false,
+        "show_type_hints": true,
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+    },
+
+    // ============================================================================
+    // LSP CONFIGURATION
+    // ============================================================================
+    "lsp": {
+        "tailwindcss-language-server": {
+            "settings": {
+                "classAttributes": ["class", "className", "ngClass", "styles"],
+            },
+        },
+    },
+
+    // ============================================================================
+    // LANGUAGE-SPECIFIC SETTINGS
+    // ============================================================================
+    "languages": {
+        "TypeScript": {
+            "tab_size": 2,
+            "format_on_save": "off",
+            "preferred_line_length": 120,
+        },
+        "JavaScript": {
+            "tab_size": 2,
+            "format_on_save": "off",
+            "preferred_line_length": 120,
+        },
+        "TSX": {
+            "tab_size": 2,
+            "format_on_save": "off",
+            "preferred_line_length": 120,
+        },
+        "C#": {
+            "tab_size": 4,
+            "format_on_save": "off",
+            "preferred_line_length": 120,
+        },
+        "Python": {
+            "tab_size": 4,
+            "formatter": {
+                "language_server": {
+                    "name": "ruff",
+                },
+            },
+            "language_servers": ["pyright", "ruff"],
+        },
+        "Markdown": {
+            "soft_wrap": "preferred_line_length",
+            "preferred_line_length": 80,
+        },
+    },
+
+    // ============================================================================
+    // FILE FINDER
+    // ============================================================================
+    "file_finder": {
+        "modal_max_width": "medium",
+    },
+
+    // ============================================================================
+    // FILE TYPES
+    // ============================================================================
+    "file_types": {
+        "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+        "JSON": ["json", "jsonc", "*.code-snippets"],
+    },
+
+    // ============================================================================
+    // FILE SCAN EXCLUSIONS
+    // ============================================================================
+    "file_scan_exclusions": [
+        "**/.git",
+        "**/.svn",
+        "**/.hg",
+        "**/CVS",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/.classpath",
+        "**/.settings",
+        "**/out",
+        "**/dist",
+        "**/.husky",
+        "**/.turbo",
+        "**/.vscode-test",
+        "**/.vscode",
+        "**/.next",
+        "**/.storybook",
+        "**/.tap",
+        "**/.nyc_output",
+        "**/report",
+        "**/node_modules",
+        "**/bin",
+        "**/obj",
+    ],
+
+    // ============================================================================
+    // FEATURES & TELEMETRY
+    // ============================================================================
+    "features": {
+        "edit_prediction_provider": "zed",
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+
+    // ============================================================================
+    // RESTORE & SESSION
+    // ============================================================================
+    "restore_on_startup": "none",
+
+    // ============================================================================
+    // DIAGNOSTICS
+    // ============================================================================
+    "diagnostics": {
+        "include_warnings": true,
+    },
+
+    // ============================================================================
+    // GIT
+    // ============================================================================
+    "git": {
+        "inline_blame": {
+            "enabled": false,
+        },
+    },
+}
